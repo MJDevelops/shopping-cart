@@ -26,7 +26,7 @@ const shopContentSlice = createSlice({
       })
       .addCase(fetchShopFromServer.fulfilled, (state, action) => {
         state.isLoading = false;
-        state.content = action.payload.map((item) => item);
+        state.content = action.payload;
       })
       .addCase(fetchShopFromServer.rejected, (state, action) => {
         state.isLoading = false;
