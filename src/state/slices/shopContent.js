@@ -6,8 +6,7 @@ const fetchShopFromServer = createAsyncThunk(
     const res = await fetch(
       "https://shopping-cart-3919c-default-rtdb.firebaseio.com/products.json"
     );
-    const json = await res.json();
-    return json;
+    return await res.json();
   }
 );
 
